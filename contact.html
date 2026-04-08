@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系方式</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C4A77D',    /* 暖金色 */
+                        secondary: '#8B7355',  /* 焦糖棕 */
+                        accent: '#A68A64',     /* 深一点的暖金 */
+                        dark: {
+                            900: '#1A1A1A',
+                            800: '#2C2C2C'     /* 深炭灰文字 */
+                        },
+                        light: {
+                            bg: '#FAF7F2'      /* 暖米色背景 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Source Sans Pro', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'Source Serif Pro', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#FAF7F2] text-[#2C2C2C] min-h-screen font-sans flex flex-col selection:bg-primary selection:text-white">
+
+    <!-- 统一导航栏 -->
+    <nav class="w-full z-50 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold text-dark-800 tracking-wider hover:text-primary transition-colors"></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 font-serif text-sm tracking-widest uppercase">
+                        <a href="index.html" class="nav-link-underline text-gray-500 hover:text-dark-800">首页</a>
+                        <a href="about.html" class="nav-link-underline text-gray-500 hover:text-dark-800">关于我</a>
+                        <a href="timeline.html" class="nav-link-underline text-gray-500 hover:text-dark-800">职业时间线</a>
+                        <a href="skills.html" class="nav-link-underline text-gray-500 hover:text-dark-800">技能展示</a>
+                        <a href="why.html" class="nav-link-underline text-gray-500 hover:text-dark-800">为什么转型</a>
+                        <a href="future.html" class="nav-link-underline text-gray-500 hover:text-dark-800">未来规划</a>
+                        <a href="contact.html" class="nav-link-underline text-primary">联系方式</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-dark-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white border-b border-gray-200 absolute w-full shadow-lg" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-2 font-serif text-center">
+                <a href="index.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800 border-b border-gray-100">首页</a>
+                <a href="about.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800 border-b border-gray-100">关于我</a>
+                <a href="timeline.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800 border-b border-gray-100">职业时间线</a>
+                <a href="skills.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800 border-b border-gray-100">技能展示</a>
+                <a href="why.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800 border-b border-gray-100">为什么转型</a>
+                <a href="future.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800 border-b border-gray-100">未来规划</a>
+                <a href="contact.html" class="block px-3 py-3 text-primary">联系方式</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主体内容：联系方式 -->
+    <main class="flex-grow pt-10 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+        
+        <div class="mb-16 text-center animate-on-scroll">
+            <h4 class="font-serif text-primary text-sm tracking-widest uppercase mb-4">Chapter 06</h4>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-dark-800 mb-6">
+                和我聊聊
+            </h1>
+            <div class="w-16 h-px bg-gray-300 mx-auto mb-6"></div>
+            <p class="font-serif text-gray-500 italic max-w-2xl mx-auto">
+                无论你是正在寻找AI训练师的企业，还是同样在经历职场转型的同路人，随时欢迎给我留言。
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            
+            <!-- 左侧：联系信息 -->
+            <div class="space-y-10 animate-on-scroll">
+                
+                <!-- 邮箱 -->
+                <div class="group">
+                    <p class="font-serif text-xs tracking-widest uppercase text-gray-400 mb-2">Email</p>
+                    <a href="mailto:[your@email.com]" class="font-serif text-2xl text-dark-800 border-b border-gray-300 group-hover:border-primary group-hover:text-primary transition-colors pb-1">
+                        [1065783698@qq.com]
+                    </a>
+                </div>
+
+                <!-- 所在地 -->
+                <div class="group">
+                    <p class="font-serif text-xs tracking-widest uppercase text-gray-400 mb-2">Location</p>
+                    <p class="font-serif text-2xl text-dark-800">
+                        [杭州]
+                    </p>
+                </div>
+
+                <!-- 优雅的引用 -->
+                <div class="pt-8 border-t border-gray-200 mt-12">
+                    <p class="font-serif text-secondary italic text-lg leading-relaxed">
+                        "The only way to make sense out of change is to plunge into it, move with it, and join the dance."
+                    </p>
+                </div>
+            </div>
+
+            <!-- 右侧：留言表单 (极简杂志风) -->
+            <div class="animate-on-scroll" style="transition-delay: 200ms;">
+                <div class="bg-white p-10 border border-gray-200 shadow-sm">
+                    <h3 class="font-serif text-2xl font-bold mb-8 text-dark-800">发送消息</h3>
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('提示：这是一个静态页面模板，请自行接入后端服务或表单服务（如 Formspree）。');">
+                        <div>
+                            <label class="block font-serif text-xs tracking-widest uppercase text-gray-500 mb-2" for="name">Name</label>
+                            <input type="text" id="name" placeholder="[您的名字]" class="w-full bg-transparent border-b border-gray-300 px-0 py-2 text-dark-800 focus:outline-none focus:border-primary transition-colors font-sans placeholder-gray-400">
+                        </div>
+                        <div>
+                            <label class="block font-serif text-xs tracking-widest uppercase text-gray-500 mb-2" for="email">Email</label>
+                            <input type="email" id="email" placeholder="[您的邮箱]" class="w-full bg-transparent border-b border-gray-300 px-0 py-2 text-dark-800 focus:outline-none focus:border-primary transition-colors font-sans placeholder-gray-400">
+                        </div>
+                        <div>
+                            <label class="block font-serif text-xs tracking-widest uppercase text-gray-500 mb-2" for="message">Message</label>
+                            <textarea id="message" rows="4" placeholder="[想对我说的话...]" class="w-full bg-transparent border-b border-gray-300 px-0 py-2 text-dark-800 focus:outline-none focus:border-primary transition-colors font-sans placeholder-gray-400 resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full btn-elegant bg-dark-800 text-white font-serif text-sm tracking-widest uppercase py-4 mt-8 hover:bg-primary transition-colors">
+                            Send Message
+                        </button>
+                        <p class="text-xs text-gray-400 text-center mt-4 font-serif italic">
+                            * 此表单为静态占位
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

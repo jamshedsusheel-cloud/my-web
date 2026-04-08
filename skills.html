@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技能展示</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C4A77D',    /* 暖金色 */
+                        secondary: '#8B7355',  /* 焦糖棕 */
+                        accent: '#A68A64',     /* 深一点的暖金 */
+                        dark: {
+                            900: '#1A1A1A',
+                            800: '#2C2C2C'     /* 深炭灰文字 */
+                        },
+                        light: {
+                            bg: '#FAF7F2'      /* 暖米色背景 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Source Sans Pro', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'Source Serif Pro', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#FAF7F2] text-[#2C2C2C] min-h-screen font-sans flex flex-col selection:bg-primary selection:text-white">
+
+    <!-- 统一导航栏 -->
+    <nav class="w-full z-50 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold text-dark-800 tracking-wider hover:text-primary transition-colors"></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 font-serif text-sm tracking-widest uppercase">
+                        <a href="index.html" class="nav-link-underline text-gray-500 hover:text-dark-800">首页</a>
+                        <a href="about.html" class="nav-link-underline text-gray-500 hover:text-dark-800">关于我</a>
+                        <a href="timeline.html" class="nav-link-underline text-gray-500 hover:text-dark-800">职业时间线</a>
+                        <a href="skills.html" class="nav-link-underline text-primary">技能展示</a>
+                        <a href="why.html" class="nav-link-underline text-gray-500 hover:text-dark-800">为什么转型</a>
+                        <a href="future.html" class="nav-link-underline text-gray-500 hover:text-dark-800">未来规划</a>
+                        <a href="contact.html" class="nav-link-underline text-gray-500 hover:text-dark-800">联系方式</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-dark-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white border-b border-gray-200 absolute w-full shadow-lg" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-2 font-serif text-center">
+                <a href="index.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800 border-b border-gray-100">首页</a>
+                <a href="about.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800 border-b border-gray-100">关于我</a>
+                <a href="timeline.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800 border-b border-gray-100">职业时间线</a>
+                <a href="skills.html" class="block px-3 py-3 text-primary border-b border-gray-100">技能展示</a>
+                <a href="why.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800 border-b border-gray-100">为什么转型</a>
+                <a href="future.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800 border-b border-gray-100">未来规划</a>
+                <a href="contact.html" class="block px-3 py-3 text-gray-600 hover:text-dark-800">联系方式</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主体内容：技能展示 -->
+    <main class="flex-grow pt-10 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full">
+        
+        <div class="mb-16 text-center animate-on-scroll">
+            <h4 class="font-serif text-primary text-sm tracking-widest uppercase mb-4">Chapter 03</h4>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-dark-800 mb-6">
+                技能图谱
+            </h1>
+            <div class="w-16 h-px bg-gray-300 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            
+            <!-- 左栏 - 可迁移技能 -->
+            <div class="animate-on-scroll">
+                <div class="mb-10 text-center lg:text-left">
+                    <h2 class="font-serif text-2xl font-bold text-dark-800 mb-2">可迁移技能</h2>
+                    <p class="text-gray-500 italic font-serif text-sm">旧经验沉淀的底气</p>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- 技能项 1 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-serif text-lg font-bold text-dark-800">[项目管理]</span>
+                            <span class="text-primary text-sm tracking-[0.2em]">✦ ✦ ✦ ✦ ✧</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">[3年半制造业统筹经验，能把控复杂流程节点，确保项目按时交付。]</p>
+                    </div>
+
+                    <!-- 技能项 2 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-serif text-lg font-bold text-dark-800">[成本控制]</span>
+                            <span class="text-primary text-sm tracking-[0.2em]">✦ ✦ ✦ ✦ ✧</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">[造价专业背景+制造业实践，对数据极度敏感，善于优化投入产出比。]</p>
+                    </div>
+
+                    <!-- 技能项 3 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-serif text-lg font-bold text-dark-800">[沟通协调]</span>
+                            <span class="text-primary text-sm tracking-[0.2em]">✦ ✦ ✦ ✦ ✦</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">[擅长打破跨部门壁垒，能协调各方顺利推进项目进程]</p>
+                    </div>
+
+                    <!-- 技能项 4 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-serif text-lg font-bold text-dark-800">[数据分析]</span>
+                            <span class="text-primary text-sm tracking-[0.2em]">✦ ✦ ✦ ✧ ✧</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">[熟练处理项目数据，擅长从海量信息中寻找异常根因。]</p>
+                    </div>
+
+                    <!-- 技能项 5 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-serif text-lg font-bold text-dark-800">[问题解决]</span>
+                            <span class="text-primary text-sm tracking-[0.2em]">✦ ✦ ✦ ✦ ✧</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">[面对突发状况能快速冷静，拆解问题并制定切实可行的对策。]</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右栏 - AI新技能 -->
+            <div class="animate-on-scroll" style="transition-delay: 200ms;">
+                <div class="mb-10 text-center lg:text-left">
+                    <h2 class="font-serif text-2xl font-bold text-dark-800 mb-2">AI 新技能</h2>
+                    <p class="text-gray-500 italic font-serif text-sm">正在生长的未来</p>
+                </div>
+
+                <div class="magazine-card bg-white p-8 space-y-10 relative">
+                    <!-- 装饰角标 -->
+                    <div class="absolute top-0 right-0 w-12 h-12 bg-[#FAF7F2] border-b border-l border-gray-200"></div>
+
+                    <!-- AI技能项 1 -->
+                    <div>
+                        <div class="flex justify-between items-end mb-3">
+                            <span class="font-serif text-lg font-bold text-dark-800">[AI工具]</span>
+                            <span class="font-serif text-xs italic text-secondary">[入门]</span>
+                        </div>
+                        <div class="w-full bg-gray-100 h-1 mb-3">
+                            <div class="bg-primary h-1" style="width: 30%"></div>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed"><span class="font-serif text-secondary mr-1">Target.</span>[目标描述：熟练使用其辅助完成代码及文档生成，提升工作效率。]</p>
+                    </div>
+
+                    <!-- AI技能项 2 -->
+                    <div>
+                        <div class="flex justify-between items-end mb-3">
+                            <span class="font-serif text-lg font-bold text-dark-800">[Prompt 工程]</span>
+                            <span class="font-serif text-xs italic text-secondary">[了解框架]</span>
+                        </div>
+                        <div class="w-full bg-gray-100 h-1 mb-3">
+                            <div class="bg-primary h-1" style="width: 25%"></div>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed"><span class="font-serif text-secondary mr-1">Target.</span>[目标描述：掌握结构化提示词编写，能精准控制并提高大模型输出质量。]</p>
+                    </div>
+
+                    <!-- AI技能项 3 -->
+                    <div>
+                        <div class="flex justify-between items-end mb-3">
+                            <span class="font-serif text-lg font-bold text-dark-800">[AI 基础知识]</span>
+                            <span class="font-serif text-xs italic text-gray-400">[刚了解]</span>
+                        </div>
+                        <div class="w-full bg-gray-100 h-1 mb-3">
+                            <div class="bg-gray-300 h-1" style="width: 15%"></div>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed"><span class="font-serif text-secondary mr-1">Target.</span>[目标描述：深入理解大模型的基本原理、局限性，以及如何处理幻觉问题。]</p>
+                    </div>
+
+                    <!-- AI技能项 4 -->
+                    <div>
+                        <div class="flex justify-between items-end mb-3">
+                            <span class="font-serif text-lg font-bold text-dark-800">[数据标注]</span>
+                            <span class="font-serif text-xs italic text-gray-400">[待学习]</span>
+                        </div>
+                        <div class="w-full bg-gray-100 h-1 mb-3">
+                            <div class="bg-gray-200 h-1" style="width: 5%"></div>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed"><span class="font-serif text-secondary mr-1">Target.</span>[目标描述：系统学习各类数据（文本/图像等）的标注规范及质量检验标准。]</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
